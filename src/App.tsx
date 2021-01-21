@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { Router, RouteComponentProps } from "@reach/router"
 import logo from './logo.svg';
 import './App.css';
 
-interface AppProps {}
+interface AppProps extends RouteComponentProps {}
 
-function App({}: AppProps) {
+const Home: React.FC<AppProps> = () => {
   // Create the count state.
   const [count, setCount] = useState(0);
   // Create the counter (+1 every second).
@@ -37,6 +38,17 @@ function App({}: AppProps) {
       </header>
     </div>
   );
+}
+
+const NotFound: React.FC<AppProps> = () => <h1>404 Route does not exist</h1>
+
+const App: React.FC = () => {
+  return (
+    <Router>
+      <NotFound default />
+      <Home path="/" />
+    </Router>
+  )
 }
 
 export default App;
