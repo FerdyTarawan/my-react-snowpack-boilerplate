@@ -48,7 +48,15 @@ const Home: React.FC<AppProps> = () => {
   );
 }
 
-const NotFound: React.FC<AppProps> = () => <h1>404 Route does not exist</h1>
+const NotFound: React.FC<AppProps> = () => {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>404 Route does not exist</h1>
+      </header>
+    </div>
+  )
+}
 
 const App: React.FC = () => {
   return (
