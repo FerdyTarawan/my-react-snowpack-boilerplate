@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Router, RouteComponentProps } from "@reach/router"
+import { Button } from '@chakra-ui/react'
+import { useStore } from '@app/hooks'
 import logo from './logo.svg';
 import './App.css';
 
@@ -15,6 +17,8 @@ const Home: React.FC<AppProps> = () => {
   }, [count, setCount]);
   // Return the App component.
 
+  const { bears, increase } = useStore()
+
   return (
     <div className="App">
       <header className="App-header">
@@ -25,6 +29,10 @@ const Home: React.FC<AppProps> = () => {
         <p>
           Page has been open for <code>{count}</code> seconds.
         </p>
+        <p>
+          Bear Count: <code>{bears}</code>.
+        </p>
+        <Button onClick={() => increase(1)}>Increase Bear Count</Button>
         <p>
           <a
             className="App-link"
