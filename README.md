@@ -1,6 +1,20 @@
-# New Project
+# Skeleton project for React with Snowpack
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
+> Included some libraries:
+  - reach-router
+  - zustand
+  - react-query
+  - immer
+  - chakra-ui
+  - lodash
+  - react-use
+  - date-fns
+  - react-hook-form
+  - yup
+  - ky
+  - react-i18next
+  - type-fest
 
 ## Available Scripts
 
