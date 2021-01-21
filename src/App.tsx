@@ -13,6 +13,7 @@ function App({}: AppProps) {
     return () => clearTimeout(timer);
   }, [count, setCount]);
   // Return the App component.
+
   return (
     <div className="App">
       <header className="App-header">
