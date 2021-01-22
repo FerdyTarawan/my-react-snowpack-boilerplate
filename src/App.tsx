@@ -32,7 +32,7 @@ const Home: React.FC<AppProps> = () => {
         <p>
           Bear Count: <code>{bears}</code>.
         </p>
-        <Button onClick={() => increase(1)}>Increase Bear Count</Button>
+        <Button onClick={() => increase(1)} variant="outline">Increase Bear Count</Button>
         <p>
           <a
             className="App-link"
