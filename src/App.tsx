@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Router, RouteComponentProps } from "@reach/router"
 import { Button } from '@chakra-ui/react'
-import { useStore } from '@app/hooks'
+import { useInterval, useStore } from '@app/hooks'
 import logo from './logo.svg';
 import './App.css';
 
@@ -10,13 +10,13 @@ interface AppProps extends RouteComponentProps {}
 const Home: React.FC<AppProps> = () => {
   // Create the count state.
   const [count, setCount] = useState(0);
-  // Create the counter (+1 every second).
-  useEffect(() => {
-    const timer = setTimeout(() => setCount(count + 1), 1000);
-    return () => clearTimeout(timer);
-  }, [count, setCount]);
-  // Return the App component.
 
+  // Create the counter (+1 every second).
+  useInterval(() => {
+    setCount((count) => count + 1);
+  }, 1000);
+
+  // Zustand global state.
   const { bears, increase } = useStore()
 
   return (
