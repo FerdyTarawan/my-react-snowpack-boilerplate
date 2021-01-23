@@ -2,19 +2,19 @@
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 > Included some libraries:
-  - reach-router
-  - zustand
-  - react-query
-  - immer
-  - chakra-ui
-  - lodash
-  - react-use
-  - date-fns
-  - react-hook-form
-  - yup
-  - ky
-  - react-i18next
-  - type-fest
+  - [reach-router](https://github.com/reach/router)
+  - [zustand](https://github.com/pmndrs/zustand)
+  - [react-query](https://github.com/tannerlinsley/react-query)
+  - [immer](https://github.com/immerjs/immer) [, useImmer hooks](https://github.com/immerjs/use-immer)
+  - [chakra-ui](https://github.com/chakra-ui/chakra-ui)
+  - [lodash](https://github.com/lodash/lodash)
+  - [react-use](https://github.com/streamich/react-use)
+  - [date-fns](https://github.com/date-fns/date-fns)
+  - [react-hook-form](https://github.com/react-hook-form/react-hook-form)
+  - [yup](https://github.com/jquense/yup)
+  - [ky](https://github.com/sindresorhus/ky)
+  - [react-i18next](https://github.com/i18next/react-i18next)
+  - [type-fest](https://github.com/sindresorhus/type-fest)
 
 ## Available Scripts
 
