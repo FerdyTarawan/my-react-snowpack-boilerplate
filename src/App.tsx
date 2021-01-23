@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Router, RouteComponentProps } from "@reach/router"
-import { Button } from '@chakra-ui/react'
-import { useInterval, useStore } from '@app/hooks'
+import { Button } from '@chakra-ui/react';
+import { RouteComponentProps, Router } from '@reach/router';
+import React, { useState } from 'react';
+
+import { useInterval, useStore } from '@app/hooks';
+
 import logo from './logo.svg';
 import './App.css';
 
-interface AppProps extends RouteComponentProps {}
+type AppProps = RouteComponentProps;
 
 const Home: React.FC<AppProps> = () => {
   // Create the count state.
@@ -17,12 +19,12 @@ const Home: React.FC<AppProps> = () => {
   }, 1000);
 
   // Zustand global state.
-  const { bears, increase } = useStore()
+  const { bears, increase } = useStore();
 
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img alt="logo" className="App-logo" src={logo} />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -32,13 +34,15 @@ const Home: React.FC<AppProps> = () => {
         <p>
           Bear Count: <code>{bears}</code>.
         </p>
-        <Button onClick={() => increase(1)} variant="outline">Increase Bear Count</Button>
+        <Button onClick={() => increase(1)} variant="outline">
+          Increase Bear Count
+        </Button>
         <p>
           <a
             className="App-link"
             href="https://reactjs.org"
-            target="_blank"
             rel="noopener noreferrer"
+            target="_blank"
           >
             Learn React
           </a>
@@ -46,7 +50,7 @@ const Home: React.FC<AppProps> = () => {
       </header>
     </div>
   );
-}
+};
 
 const NotFound: React.FC<AppProps> = () => {
   return (
@@ -55,8 +59,8 @@ const NotFound: React.FC<AppProps> = () => {
         <h1>404 Route does not exist</h1>
       </header>
     </div>
-  )
-}
+  );
+};
 
 const App: React.FC = () => {
   return (
@@ -64,7 +68,7 @@ const App: React.FC = () => {
       <NotFound default />
       <Home path="/" />
     </Router>
-  )
-}
+  );
+};
 
 export default App;

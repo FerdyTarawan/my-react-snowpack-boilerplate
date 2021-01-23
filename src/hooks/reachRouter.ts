@@ -1,1 +1,1 @@
-export { useLocation, useMatch, useNavigate, useParams } from "@reach/router"
+export { useLocation, useMatch, useNavigate, useParams } from '@reach/router';

@@ -1,1 +1,1 @@
-export { useImmer, useImmerReducer } from 'use-immer'
+export { useImmer, useImmerReducer } from 'use-immer';

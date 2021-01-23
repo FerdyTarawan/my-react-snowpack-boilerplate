@@ -1,11 +1,11 @@
-import create from 'zustand'
+import create from 'zustand';
 
 type State = {
-  bears: number
-  increase: (by: number) => void
-}
+  bears: number;
+  increase: (by: number) => void;
+};
 
-export const useStore = create<State>(set => ({
+export const useStore = create<State>((set) => ({
   bears: 0,
-  increase: (by) => set(state => ({ bears: state.bears + by })),
-}))
+  increase: (by) => set((state) => ({ bears: state.bears + by })),
+}));
