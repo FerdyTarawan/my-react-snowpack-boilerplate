@@ -19,6 +19,11 @@
     "sort-keys-fix"
   ],
   "root": true,
+  "env": {
+    "browser": true,
+    "amd": true,
+    "node": true
+  },
   "rules": {
     "import/default": ["off"],
     "import/extensions": [
