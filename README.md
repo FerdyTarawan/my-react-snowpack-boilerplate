@@ -11,7 +11,7 @@
   - [react-use](https://github.com/streamich/react-use)
   - [date-fns](https://github.com/date-fns/date-fns)
   - [react-hook-form](https://github.com/react-hook-form/react-hook-form)
-  - [yup](https://github.com/jquense/yup)
+  - [zod](https://github.com/colinhacks/zod)
   - [ky](https://github.com/sindresorhus/ky)
   - [react-i18next](https://github.com/i18next/react-i18next)
   - [type-fest](https://github.com/sindresorhus/type-fest)
