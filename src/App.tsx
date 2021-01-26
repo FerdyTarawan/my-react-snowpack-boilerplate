@@ -1,8 +1,8 @@
 import { Button } from '@chakra-ui/react';
 import { RouteComponentProps, Router } from '@reach/router';
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 
-import { useInterval, useStore } from '@app/hooks';
+import { useInterval, useStore, useTranslation } from '@app/hooks';
 
 import logo from './logo.svg';
 import './App.css';
@@ -20,22 +20,18 @@ const Home: React.FC<AppProps> = () => {
 
   // Zustand global state.
   const { bears, increase } = useStore();
+  const { t } = useTranslation();
 
   return (
     <div className="App">
       <header className="App-header">
         <img alt="logo" className="App-logo" src={logo} />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <p>
-          Page has been open for <code>{count}</code> seconds.
-        </p>
-        <p>
-          Bear Count: <code>{bears}</code>.
-        </p>
+        <p>{t('title')}</p>
+        <p>{t('description.part1')}</p>
+        <p>{t('description.part2', { time: count })}</p>
+        <p>{t('description.part3', { count: bears })}</p>
         <Button onClick={() => increase(1)} variant="outline">
-          Increase Bear Count
+          {t('action.incrementBear')}
         </Button>
         <p>
           <a
@@ -44,7 +40,7 @@ const Home: React.FC<AppProps> = () => {
             rel="noopener noreferrer"
             target="_blank"
           >
-            Learn React
+            {t('description.link')}
           </a>
         </p>
       </header>
@@ -62,12 +58,20 @@ const NotFound: React.FC<AppProps> = () => {
   );
 };
 
+const Loader = () => (
+  <div className="App">
+    <div>loading...</div>
+  </div>
+);
+
 const App: React.FC = () => {
   return (
-    <Router>
-      <NotFound default />
-      <Home path="/" />
-    </Router>
+    <Suspense fallback={<Loader />}>
+      <Router>
+        <NotFound default />
+        <Home path="/" />
+      </Router>
+    </Suspense>
   );
 };
 

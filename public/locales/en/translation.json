@@ -1,0 +1,12 @@
+{
+  "action": {
+      "incrementBear": "Increase Bear Count"
+  },
+  "description": {
+    "part1": "To get started, edit src/App.tsx and save to reload.",
+    "part2": "Page has been open for {{time}} seconds.",
+    "part3": "Bear count: {{count}}",
+    "link": "Learn react"
+  },
+  "title": "Welcome to react with snowpack!"
+}

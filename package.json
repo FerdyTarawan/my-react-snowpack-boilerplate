@@ -17,7 +17,7 @@
     "framer-motion": "^3.2.1",
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^6.0.1",
-    "i18next-xhr-backend": "^3.2.2",
+    "i18next-http-backend": "^1.0.23",
     "immer": "^8.0.1",
     "ky": "^0.26.0",
     "lodash": "^4.17.20",
