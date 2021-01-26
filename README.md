@@ -9,7 +9,7 @@
   - [chakra-ui](https://github.com/chakra-ui/chakra-ui)
   - [lodash](https://github.com/lodash/lodash)
   - [react-use](https://github.com/streamich/react-use)
-  - [date-fns](https://github.com/date-fns/date-fns)
+  - [dayjs](https://github.com/iamkun/dayjs/)
   - [react-hook-form](https://github.com/react-hook-form/react-hook-form)
   - [zod](https://github.com/colinhacks/zod)
   - [ky](https://github.com/sindresorhus/ky)
