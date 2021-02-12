@@ -26,7 +26,7 @@ export { default as useSetState } from 'react-use/lib/useSetState';
 export { default as useStateList } from 'react-use/lib/useStateList';
 export { default as useStateValidator } from 'react-use/lib/useStateValidator';
 export { default as useThrottle } from 'react-use/lib/useThrottle';
-export { default as useTimeoutFn } from 'react-use/lib/useTimeoutFn';
+export { default as useTimeout } from 'react-use/lib/useTimeoutFn';
 export { default as useTitle } from 'react-use/lib/useTitle';
 export { default as useToggle } from 'react-use/lib/useToggle';
 export { default as useUnmount } from 'react-use/lib/useUnmount';
