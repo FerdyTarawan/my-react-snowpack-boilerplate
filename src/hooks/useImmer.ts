@@ -1,1 +1,4 @@
-export { useImmer, useImmerReducer } from 'use-immer';
+export {
+  useImmer as useImmutableState,
+  useImmerReducer as useImmutableReducer,
+} from 'use-immer';
