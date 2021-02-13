@@ -1,0 +1,13 @@
+{
+  "action": {
+    "changeLanguage": "Ganti Bahasa",
+    "incrementBear": "Tambah jumlah beruang"
+  },
+  "description": {
+    "part1": "Untuk memulai, ubah src/App.tsx dan save untuk reload.",
+    "part2": "Halaman ini sudah dibuka selama {{time}} detik.",
+    "part3": "Jumlah beruang: {{count}}",
+    "link": "Belajar react"
+  },
+  "title": "Selamat datang di React dengan snowpack!"
+}

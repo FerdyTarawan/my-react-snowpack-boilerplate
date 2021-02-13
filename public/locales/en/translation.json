@@ -1,6 +1,7 @@
 {
   "action": {
-      "incrementBear": "Increase Bear Count"
+    "changeLanguage": "Change language",
+    "incrementBear": "Increase Bear Count"
   },
   "description": {
     "part1": "To get started, edit src/App.tsx and save to reload.",

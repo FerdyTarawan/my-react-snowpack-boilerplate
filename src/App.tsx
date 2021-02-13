@@ -1,6 +1,6 @@
 import { Button } from '@chakra-ui/react';
 import { RouteComponentProps, Router } from '@reach/router';
-import React, { Suspense, useState } from 'react';
+import React, { useState } from 'react';
 
 import { useInterval, useStore, useTranslation } from '@app/hooks';
 
@@ -20,7 +20,13 @@ const Home: React.FC<AppProps> = () => {
 
   // Zustand global state.
   const { bears, increase } = useStore();
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
+
+  const toggleLanguage = () => {
+    i18n.language === 'en'
+      ? i18n.changeLanguage('id')
+      : i18n.changeLanguage('en');
+  };
 
   return (
     <div className="App">
@@ -32,6 +38,9 @@ const Home: React.FC<AppProps> = () => {
         <p>{t('description.part3', { count: bears })}</p>
         <Button onClick={() => increase(1)} variant="outline">
           {t('action.incrementBear')}
+        </Button>
+        <Button mt={2} onClick={toggleLanguage} variant="outline">
+          {t('action.changeLanguage')}
         </Button>
         <p>
           <a
@@ -58,20 +67,12 @@ const NotFound: React.FC<AppProps> = () => {
   );
 };
 
-const Loader = () => (
-  <div className="App">
-    <div>loading...</div>
-  </div>
-);
-
 const App: React.FC = () => {
   return (
-    <Suspense fallback={<Loader />}>
-      <Router>
-        <NotFound default />
-        <Home path="/" />
-      </Router>
-    </Suspense>
+    <Router>
+      <NotFound default />
+      <Home path="/" />
+    </Router>
   );
 };
 
