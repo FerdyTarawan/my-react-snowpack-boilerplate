@@ -2,6 +2,7 @@
 module.exports = {
   alias: {
     '@app': './src',
+    '@public': './public',
   },
   buildOptions: {
     /* ... */
