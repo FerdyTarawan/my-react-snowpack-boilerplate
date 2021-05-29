@@ -1,4 +1,4 @@
-export { default as createMemo } from 'react-use/lib/createMemo';
+export { default as createMemo } from 'react-use/lib/factory/createMemo';
 export { default as useAsync } from 'react-use/lib/useAsync';
 export { default as useBeforeUnload } from 'react-use/lib/useBeforeUnload';
 export { default as useCopyToClipboard } from 'react-use/lib/useCopyToClipboard';
